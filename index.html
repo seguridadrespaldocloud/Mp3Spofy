@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Reproductor de Música</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">🎵 <span>Mi Música</span></div>
+      <nav class="nav">
+        <a class="active" href="#">Inicio</a>
+        <a href="#">Buscar</a>
+        <a href="#">Tu Biblioteca</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <div class="search">
+          <span>🔎</span>
+          <input id="search" type="text" placeholder="Buscar canciones..." />
+        </div>
+        <div class="user">Invitado</div>
+      </div>
+
+      <div class="scroll">
+        <div class="section-title">Playlist</div>
+        <ul id="playlist"></ul>
+      </div>
+    </main>
+
+    <footer class="player">
+      <div class="controls">
+        <button id="btn-shuffle" class="btn" title="Aleatorio">🔀</button>
+        <button id="btn-prev" class="btn" title="Anterior">⏮</button>
+        <button id="btn-play" class="btn" title="Reproducir">▶</button>
+        <button id="btn-next" class="btn" title="Siguiente">⏭</button>
+        <button id="btn-repeat" class="btn" title="Repetir">🔁</button>
+      </div>
+
+      <div class="playback">
+        <div id="now-title" class="subtitle">—</div>
+        <div class="time">
+          <span id="time-current">0:00</span>
+          <input id="progress" class="range" type="range" min="0" max="1000" value="0" />
+          <span id="time-total">0:00</span>
+        </div>
+      </div>
+
+      <div class="right">
+        <span>🔊</span>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="1" />
+      </div>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
